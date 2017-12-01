@@ -1,66 +1,20 @@
-body{
-	background-color: #f4d35d;
+body {
+    background-color: sandybrown;
+    color: black;
+    font-family: monospace;
 }
 
-.container{
+img {
+    height: 230px;
+    width: auto;
+    margin-bottom: 1em;
 
-	width: 960px;
-	min-width: 960px;
 }
 
 h1 {
-	text-align: center;
+  font-size: 40px;
 }
 
-#burger-image {
-	padding-top: 20px;
-	width: 200px;
-	display: block;
-	margin: auto;
-}
-#burgers-div{
-	margin: auto;
-	min-width: 960px;
-	padding: 10px;
-}
-
-#dropdown {
-
-}
-textarea {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-textarea[placeholder]{
-	text-align: center;
-}
-
-#new-burger-button{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10px;
-}
-
-#burgers{
-	/*float: left;*/
-}
-#eaten-burgers {
-	float: right;
-}
-/*display Devour It! button inline with the burger name
-and to the right by floating*/
-.burger-button {
-	display: inline-block;
-	float: right;
-}
-
-#eaten-burger-li{
-	color: #d3d3d1;
-}
-.form-control{
-	width: 400px;
-	height: 400px;
+#order {
+  margin-left: 5em;
 }

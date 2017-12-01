@@ -1,28 +1,22 @@
-/*==================================BURGERS MODEL====================================*/
+// Import orm.js
+const orm = require("../config/orm.js");
 
-module.exports = function(sequelize, DataTypes){
-var Burgers = sequelize.define('Burgers', {
-	burger_name: {
-		type: DataTypes.STRING,
-		allowNull: false,
-	},
-	devoured: {
-		type: DataTypes.BOOLEAN,
-		defaultValue: 0,
-	},
-	date: {
-		type: DataTypes.DATE,
-		defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
-	}
-},
-	{
-	classMethods: {
-		associate: function(models){
-			Burgers.hasOne(models.Temperatures, {
-				foreignKey: 'burger_id'
-			});
-		}
-	}
-});
- return Burgers;
+module.exports = {
+  selectAll: function(cb) {
+    orm.selectAll(function(res) {
+      cb(res);
+    });
+  },
+
+  insertOne: function(burger_name, cb) {
+    orm.insertOne(burger_name, function(res) {
+      cb(res);
+    });
+  },
+
+  updateOne: function(id, cb) {
+    orm.updateOne(id, function(res) {
+      cb(res);
+    });
+  }
 };
